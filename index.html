@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Swiper -->
+    <link rel='stylesheet' href='https://unpkg.com/swiper/swiper-bundle.min.css'>
+    <link rel="stylesheet" href="css/main.min.css">
+    
+    <title>Turisanda - Diamond</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://www.turisanda.it//icon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.turisanda.it//icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.turisanda.it//icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.turisanda.it//icon/favicon-16x16.png">
+
+  </head>
+  <body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="bg-dark py-5 px-3 fixed-top">
+      <div class="container">
+        <div class="row d-flex flex-sm-row justify-content-between align-items-center">
+          <div class="col">
+            <img id="TU-logo" src="https://image.email.awtrade-alpitour.it/lib/fe41117175640479741671/m/1/aa2a09ea-c024-4adf-83d3-ca1a763fc644.png" height="32px" class="navbar-brand" alt="Logo Turisanda 1924">
+          </div>
+          <div id="diamond-head" class="col d-flex justify-content-end align-items-center">
+            <div class="text-end p-2 end-0 d-none d-lg-block">
+              <small class="text-uppercase fw-light text-light py-0 my-0">Agenzia Diamond</small>
+            </div>
+            <div class="end-0 d-none d-lg-block">
+              <img id="diamond-logo" src="https://www.dropbox.com/s/e3hjjd7wpn6lwrl/diamond-white.png?raw=1" height="40px" class="navbar-brand" alt="Logo Diamond">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header><!-- End Header -->
+
+    
+    <!-- ======= Main ======= -->
+    <main id="main" class="my-5">
+      <div class="container mb-5">
+        <div class="row">
+          <div class="col-12 text-center text-turisanda">
+            <img class="my-3" src="https://www.dropbox.com/s/88bfu0xsgck3u9h/diamond-gray.png?raw=1" height="96px" class="navbar-brand" alt="Logo Diamond">
+            <p class="text-uppercase fw-light fs-3 mb-5">Agenzia Diamond</p>
+            <h1>Modulo di richiesta <em class="text-neutro">materiali catalogo</em> Diamond</h1>
+            <p class="lead mt-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
+
+        <div class="container mt-5">
+          <div class="row d-flex flex-sm-row-reverse g-3">
+
+            <!-- ======= Side column ======= -->
+            <div id="side-wallet" class="col sticky-top">
+              <div id="wallet" class="card text-light bg-neutro sticky-top">
+                <div class="card-body">
+                  <h5 class="card-title">I tuoi diamanti</h5>
+                  <p>
+                    <span id="residual" class="display-4 card-text fw-bold">500</span>  <span id="walletValue"></span>  <i class="bi bi-gem"></i>
+                  </p>
+                  <div id="alert" class="alert alert-turisanda" role="alert">
+                    Hai il portafoglio pieno!
+                  </div>
+                  <button form="TUMaterialiDiamondForm" id="sub-btn" type="submit" class="btn btn-light" disabled>Invia</button>
+                </div>
+              </div>           
+            </div><!-- End Side column -->
+
+            <!-- ======= Form column ======= -->
+            <div class="col-sm-8 col-md-9">
+              
+              <form id="TUMaterialiDiamondForm" class="needs-validation" name="TUDiamondCatalogueForm" action="" method="" novalidate>
+
+                <!-- ======= Item ======= -->
+                <div class="item pb-4 mb-4 border-bottom">
+                  <div class="row text-dark">
+                    <div class="h4">
+                      Articolo #1
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center mb-3">
+                    <div id="p1" class="fw-bold text-dark p-1">
+                      30 <i class="bi bi-gem"></i>
+                    </div>
+                    <div class="p-1">
+                      <button type="button" class="btn btn-outline-turisanda btn-sm"data-bs-toggle="modal" data-bs-target="#description1">Caratteristiche <i class="bi bi-arrow-right-short"></i></button>
+                    </div>
+                    <div class="p-1">
+                      <button class="btn btn-outline-neutro btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#layout1">Vedi layout <i class="bi bi-arrow-right-short"></i></button>
+                    </div>
+                  </div><!-- item title -->
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="check1" name="check1" class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" disabled>
+                        </div>
+                        <input class="form-control" type="text" name="A1S1" value="Monosoggetto" aria-label="Monosoggetto" disabled readonly>
+                        <span class="input-group-text text-black-50"><small>Quantità:</small></span>
+                        <input type="number" id="q1" name="q1" class="form-control" oninput="partResult1(this.value); countTotal(this.value); " min="0"  aria-label="Quantità" placeholder="0">
+                      </div><!-- subject -->
+                    </div>
+                  </div><!-- item subjects -->
+            
+                  <div class="row justify-content-end text-dark mt-4">
+                    <div class="col text-end">
+                        Totale: <span id="r1" class="col-1 text-end fw-bold">0</span>
+                    </div>
+                  </div>
+
+                </div><!-- End Item -->
+
+                <!-- ======= Item ======= -->
+                <div class="item pb-4 mb-4 border-bottom">
+                  <div class="row text-dark">
+                    <div class="h4">
+                      Articolo #2
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center mb-3">
+                    <div id="p2" class="fw-bold text-dark p-1">
+                      17 <i class="bi bi-gem"></i>
+                    </div>
+                    <div class="p-1">
+                      <button type="button" class="btn btn-outline-turisanda btn-sm"data-bs-toggle="modal" data-bs-target="#description1">Caratteristiche <i class="bi bi-arrow-right-short"></i></button>
+                    </div>
+                    <div class="p-1">
+                      <button class="btn btn-outline-neutro btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#layout1">Vedi layout <i class="bi bi-arrow-right-short"></i></button>
+                    </div>
+                  </div><!-- item title -->
+                  <div class="row g-3">
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="p2-check-usa" class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" disabled>
+                        </div>
+                        <input class="form-control" type="text" value="Stati Uniti" aria-label="Stati Uniti" disabled readonly>
+                        <input type="number" id="q2-usa" class="form-control" oninput="partResult2(this.value); countTotal(this.value); " min="0"  aria-label="Quantità" placeholder="Quantità">
+                      </div>
+                    </div><!-- subject -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="p2-check-mau" class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for Mauritius layout product 2" disabled>
+                        </div>
+                        <input class="form-control flex-grow-1" type="text" value="Mauritius" aria-label="Mauritius" disabled readonly>
+                        <input type="number" id="q2-mau" class="form-control" oninput="partResult2(this.value); countTotal(this.value); " min="0"  aria-label="Quantità" placeholder="Quantità">
+                      </div>
+                    </div><!-- subject -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="p2-check-mal" class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for Maldive layout product 2" disabled>
+                        </div>
+                        <input class="form-control" type="text" value="Maldive" aria-label="Maldive" disabled readonly>
+                        <input type="number" id="q2-mal" class="form-control" oninput="partResult2(this.value); countTotal(this.value); " min="0"  aria-label="Quantità" placeholder="Quantità">
+                      </div>
+                    </div><!-- subject -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="p2-check-sey" class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for Mauritius layout product 2" disabled>
+                        </div>
+                        <input class="form-control" type="text" value="Seychelles" aria-label="Seychelles" disabled readonly>
+                        <input type="number" id="q2-sey" class="form-control" oninput="partResult2(this.value); countTotal(this.value); " min="0"  aria-label="Quantità" placeholder="Quantità">
+                      </div>
+                    </div><!-- subject -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="p2-check-mad" class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" disabled>
+                        </div>
+                        <input class="form-control" type="text" value="Madagascar" aria-label="Madagascar" disabled readonly>
+                        <input type="number" id="q2-mad" class="form-control" oninput="partResult2(this.value); countTotal(this.value); " min="0"  aria-label="Quantità" placeholder="Quantità">
+                      </div>
+                    </div><!-- subject -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="p2-check-tha" class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" disabled>
+                        </div>
+                        <input class="form-control" type="text" value="Thailandia" aria-label="Thailandia" disabled readonly>
+                        <input type="number" id="q2-tha" class="form-control" oninput="partResult2(this.value); countTotal(this.value); " min="0"  aria-label="Quantità" placeholder="Quantità">
+                      </div>
+                    </div><!-- subject -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="p2-check-gia" class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" disabled>
+                        </div>
+                        <input class="form-control" type="text" value="Giappone" aria-label="Giappone" disabled readonly>
+                        <input type="number" id="q2-gia" class="form-control" oninput="partResult2(this.value); countTotal(this.value); " min="0"  aria-label="Quantità" placeholder="Quantità">
+                      </div>
+                    </div><!-- subject -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="p2-check-sud" class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" disabled>
+                        </div>
+                        <input class="form-control" type="text" value="Sudafrica" aria-label="Sudafrica" disabled readonly>
+                        <input type="number" id="q2-sud" class="form-control" oninput="partResult2(this.value); countTotal(this.value); " min="0"  aria-label="Quantità" placeholder="Quantità">
+                      </div>
+                    </div><!-- subject -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="p2-check-emi" class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" disabled>
+                        </div>
+                        <input class="form-control" type="text" value="Emirati Arabi" aria-label="Emirati Arabi" disabled readonly>
+                        <input type="number" id="q2-emi" class="form-control" oninput="partResult2(this.value); countTotal(this.value); " min="0"  aria-label="Quantità" placeholder="Quantità">
+                      </div>
+                    </div><!-- subject -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="p2-check-car" class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" disabled>
+                        </div>
+                        <input class="form-control" type="text" value="Caraibi" aria-label="Caraibi" disabled readonly>
+                        <input type="number" id="q2-car" class="form-control" oninput="partResult2(this.value); countTotal(this.value); " min="0"  aria-label="Quantità" placeholder="Quantità">
+                      </div>
+                    </div><!-- subject -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="p2-check-pol" class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" disabled>
+                        </div>
+                        <input class="form-control" type="text" value="Polinesia" aria-label="Polinesia" disabled readonly>
+                        <input type="number" id="q2-pol" class="form-control" oninput="partResult2(this.value); countTotal(this.value); " min="0"  aria-label="Quantità" placeholder="Quantità">
+                      </div>
+                    </div><!-- subject -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="p2-check-aus" class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" disabled>
+                        </div>
+                        <input class="form-control" type="text" value="Australia" aria-label="Australia" disabled readonly>
+                        <input type="number" id="q2-aus" class="form-control" oninput="partResult2(this.value); countTotal(this.value); " min="0"  aria-label="Quantità" placeholder="Quantità">
+                      </div>
+                    </div><!-- subject -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="p2-check-nil" class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" disabled>
+                        </div>
+                        <input class="form-control" type="text" value="Nilo" aria-label="Nilo" disabled readonly>
+                        <input type="number" id="q2-nil" class="form-control" oninput="partResult2(this.value); countTotal(this.value); " min="0"  aria-label="Quantità" placeholder="Quantità">
+                      </div>
+                    </div><!-- subject -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="p2-check-per" class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" disabled>
+                        </div>
+                        <input class="form-control" type="text" value="Perù" aria-label="Perù" disabled readonly>
+                        <input type="number" id="q2-per" class="form-control" oninput="partResult2(this.value); countTotal(this.value); " min="0"  aria-label="Quantità" placeholder="Quantità">
+                      </div><!-- subject -->
+                    </div>
+                  </div>
+                  <div class="row justify-content-end text-dark mt-4">
+                    <div class="col text-end">
+                        Totale: <span id="r2" class="col-1 text-end fw-bold">0</span>
+                    </div>
+                  </div>
+                </div><!-- End Item -->
+
+                  <!-- ======= Item ======= -->
+                  <div class="item pb-4 mb-4 border-bottom">
+                  <div class="row text-dark">
+                    <div class="h4">
+                      Articolo #3
+                    </div>
+                  </div>
+                  <div class="">
+                    <div id="" class="fw-bold text-dark p-1">
+                      20 <i class="bi bi-gem"></i>
+                    </div>
+                  </div><!-- item title -->
+
+                  <div class="row text-dark mb-3">
+                    <div class="form-text">
+                      Lorem ipsum (max 2).
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text">
+                          <input id="checkA-p3" class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" disabled>
+                        </div>
+                        <input id="text-area-A-p3" oninput="partResult3(this.value); countTotal(this.value); " class="form-control" type="text" placeholder="Lorem Ipsum" value="" aria-label="Prodotto formazione">
+                      </div><!-- subject -->
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="checkB-p3" class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" disabled>
+                        </div>
+                        <input id="text-area-B-p3" oninput="partResult3(this.value); countTotal(this.value); " class="form-control" type="text" placeholder="Lorem Ipsum" value="" aria-label="Prodotto formazione">
+                      </div><!-- subject -->
+                    </div>
+                  </div><!-- item subjects -->
+            
+                  <div class="row justify-content-end text-dark mt-4">
+                    <div class="col text-end">
+                        Totale: <span id="r3" class="col-1 text-end fw-bold">0</span>
+                    </div>
+                  </div>
+
+                </div><!-- End Item -->
+
+                <!-- ======= Item ======= -->
+                <div class="item pb-4 mb-4 border-bottom">
+                  <div class="row text-dark">
+                    <div class="h4">
+                      Articolo #4
+                    </div>
+                  </div>
+                  <div class="">
+                    <div id="p3" class="fw-bold text-dark p-1">
+                      3 <i class="bi bi-gem"></i>
+                    </div>
+                  </div><!-- item title -->
+
+                  <div class="row text-dark mb-3">
+                    <div class="form-text">
+                      Lorem ipsum.
+                    </div>
+                  </div>
+
+                  <div class="row g-3">
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="check-s1" oninput="partResult4(this.value); countTotal(this.value); " class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" >
+                        </div>
+                        <input class="form-control" type="text" value="Soggetto 1" aria-label="Soggetto 1" disabled readonly>
+                      </div>
+                    </div><!-- subject -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="check-s2" oninput="partResult4(this.value); countTotal(this.value); " class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" >
+                        </div>
+                        <input class="form-control" type="text" value="Soggetto 2" aria-label="Soggetto 2" disabled readonly>
+                      </div>
+                    </div><!-- subject -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="check-s3" oninput="partResult4(this.value); countTotal(this.value); " class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" >
+                        </div>
+                        <input class="form-control" type="text" value="Soggetto 3" aria-label="Soggetto 3" disabled readonly>
+                      </div>
+                    </div><!-- subject -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="check-s4" oninput="partResult4(this.value); countTotal(this.value); " class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" >
+                        </div>
+                        <input class="form-control" type="text" value="Soggetto 4" aria-label="Soggetto 4" disabled readonly>
+                      </div>
+                    </div><!-- subject -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="check-s5" oninput="partResult4(this.value); countTotal(this.value); " class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" >
+                        </div>
+                        <input class="form-control" type="text" value="Soggetto 5" aria-label="Soggetto 5" disabled readonly>
+                      </div>
+                    </div><!-- subject -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="check-s6" oninput="partResult4(this.value); countTotal(this.value); " class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" >
+                        </div>
+                        <input class="form-control" type="text" value="Soggetto 6" aria-label="Soggetto 6" disabled readonly>
+                      </div>
+                    </div><!-- subject -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="check-s7" oninput="partResult4(this.value); countTotal(this.value); " class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input">
+                        </div>
+                        <input class="form-control" type="text" value="Soggetto 7" aria-label="Soggetto 7" disabled readonly>
+                      </div>
+                    </div><!-- subject -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="check-s8" oninput="partResult4(this.value); countTotal(this.value); " class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input">
+                        </div>
+                        <input class="form-control" type="text" value="Soggetto 8" aria-label="Soggetto 8" disabled readonly>
+                      </div>
+                    </div><!-- subject -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="check-s9" oninput="partResult4(this.value); countTotal(this.value);" class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input">
+                        </div>
+                        <input class="form-control" type="text" value="Soggetto 9" aria-label="Soggetto 9" disabled readonly>
+                      </div>
+                    </div><!-- subject -->
+                    
+                  </div><!-- item subjects -->
+            
+                  <div class="row justify-content-end text-dark mt-4">
+                    <div class="col text-end">
+                        Totale: <span id="r4" class="col-1 text-end fw-bold">0</span>
+                    </div>
+                  </div>
+
+                </div><!-- End Item -->
+
+                <!-- ======= Item ======= -->
+                <div class="item pb-4 mb-4 border-bottom">
+                  <div class="row text-dark">
+                    <div class="h4">
+                      Articolo #5 Custom request
+                    </div>
+                  </div>
+                  <div class="">
+                    <div  class="fw-bold text-dark p-1">
+                      <span id="diamondP5-A">-</span> <i class="bi bi-gem"></i>
+                    </div>
+                  </div><!-- item title -->
+
+                  <div class="row text-dark mb-3">
+                    <div class="form-text">
+                      Facci sapere ciò di cui avresti bisogno e comunicaci un budget indicativo di diamanti che vorresti spendere, valuteremo insieme le migliori soluzioni per la tua agezia.
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="form-floating mb-3">
+                        <textarea id="floatingTextarea" oninput="validateArt5(this.value)" class="form-control" placeholder="Request" ></textarea>
+                        <label for="floatingTextarea">Cosa avresti bisogno?</label>
+                        <div class="invalid-feedback">
+                          Per favore compila anche questo campo.
+                        </div>
+                      </div><!-- subject -->
+                    </div>
+                  </div><!-- item subjects -->
+
+                  <div class="row">
+                    <p class="text-dark fw-bold"><small>Inserisci un valore indicativo di buget in diamanti per le lavorazioni personalizzate richieste.</small> </p>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-text">
+                          <input id="checkP5" class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" disabled>
+                        </div>
+                        <span class="input-group-text"><i class="bi bi-gem"></i></span>
+                        <input id="price5" type="number"  class="form-control" oninput="partResult5(this.value); countTotal(this.value); validateArt5(this.value)" min="0" aria-label="Diamanti per richiesta personalizzata" placeholder="0">
+                        <div class="invalid-feedback">
+                          Per favore compila anche questo campo.
+                        </div>
+                      </div>
+                    </div><!-- subject -->
+
+                  </div>
+
+                  <div class="row justify-content-end text-dark mt-4">
+                    <div class="col text-end">
+                        Totale: <span id="diamondP5-B" class="col-1 text-end fw-bold">0</span>
+                    </div>
+                  </div>
+
+                </div><!-- End Item -->
+                    
+              </form>
+              
+            </div><!-- End Form column -->
+
+          </div>
+        </div>
+
+
+      
+        <!-- Modal Layout 1-->
+        <div class="modal fade" id="layout1" tabindex="-1" aria-labelledby="Layout 1" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content border-0 bg-transparent">
+              <div class="modal-header border-0">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body rounded">
+                <h4 class="text-light text-center py-3">Layout disponibili</h4>
+                <div class="container h-75">
+                  <div class="neutro-slider h-100 swiper-container">
+                    <div class="swiper-wrapper h-100 d-flex flex-row align-items-stretch">
+
+                      <div class="swiper-slide">
+                        <div class="col flex-grow-1 h-100">
+                          <div class="card h-100 bg-dark text-light">
+                            <img src="https://images.pexels.com/photos/7459424/pexels-photo-7459424.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title">Stati Uniti</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!-- End Slide -->
+
+                      <div class="swiper-slide">
+                        <div class="col flex-grow-1 h-100">
+                          <div class="card h-100 bg-dark text-light">
+                            <img src="https://images.pexels.com/photos/7744992/pexels-photo-7744992.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title">Mauritius</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!-- End Slide -->
+
+                      <div class="swiper-slide">
+                        <div class="col flex-grow-1 h-100">
+                          <div class="card h-100 bg-dark text-light">
+                            <img src="https://images.pexels.com/photos/1078983/pexels-photo-1078983.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title">Maldive</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!-- End Slide -->
+
+                      <div class="swiper-slide">
+                        <div class="col flex-grow-1 h-100">
+                          <div class="card h-100 bg-dark text-light">
+                            <img src="https://images.pexels.com/photos/10984152/pexels-photo-10984152.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title">Seychelles</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!-- End Slide -->
+
+                      <div class="swiper-slide">
+                        <div class="col flex-grow-1 h-100">
+                          <div class="card h-100 bg-dark text-light">
+                            <img src="https://images.pexels.com/photos/3137568/pexels-photo-3137568.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title">Madagascar</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!-- End Slide -->
+
+                      <div class="swiper-slide">
+                        <div class="col flex-grow-1 h-100">
+                          <div class="card h-100 bg-dark text-light">
+                            <img src="https://images.pexels.com/photos/2070485/pexels-photo-2070485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title">Thailandia</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!-- End Slide -->
+
+                      <div class="swiper-slide">
+                        <div class="col flex-grow-1 h-100">
+                          <div class="card h-100 bg-dark text-light">
+                            <img src="https://images.pexels.com/photos/1822605/pexels-photo-1822605.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title">Giappone</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!-- End Slide -->
+
+                      <div class="swiper-slide">
+                        <div class="col flex-grow-1 h-100">
+                          <div class="card h-100 bg-dark text-light">
+                            <img src="https://images.pexels.com/photos/33045/lion-wild-africa-african.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title">Sudafrica</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!-- End Slide -->
+
+                      <div class="swiper-slide">
+                        <div class="col flex-grow-1 h-100">
+                          <div class="card h-100 bg-dark text-light">
+                            <img src="https://images.pexels.com/photos/2406731/pexels-photo-2406731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title">Emirati Arabi</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!-- End Slide -->
+
+                      <div class="swiper-slide">
+                        <div class="col flex-grow-1 h-100">
+                          <div class="card h-100 bg-dark text-light">
+                            <img src="https://images.pexels.com/photos/3822113/pexels-photo-3822113.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title">Caraibi</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!-- End Slide -->
+
+                      <div class="swiper-slide">
+                        <div class="col flex-grow-1 h-100">
+                          <div class="card h-100 bg-dark text-light">
+                            <img src="https://images.pexels.com/photos/8640764/pexels-photo-8640764.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title">Polinesia</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!-- End Slide -->
+
+                      <div class="swiper-slide">
+                        <div class="col flex-grow-1 h-100">
+                          <div class="card h-100 bg-dark text-light">
+                            <img src="https://images.pexels.com/photos/1878293/pexels-photo-1878293.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title">Australia</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!-- End Slide -->
+
+                      <div class="swiper-slide">
+                        <div class="col flex-grow-1 h-100">
+                          <div class="card h-100 bg-dark text-light">
+                            <img src="https://images.pexels.com/photos/1755390/pexels-photo-1755390.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title">Nilo</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!-- End Slide -->
+
+                      <div class="swiper-slide">
+                        <div class="col flex-grow-1 h-100">
+                          <div class="card h-100 bg-dark text-light">
+                            <img src="https://images.pexels.com/photos/2516418/pexels-photo-2516418.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title">Perù</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!-- End Slide -->
+                      
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Description 1-->
+        <div class="modal fade" id="description1" tabindex="-1" aria-labelledby="Description 1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 bg-transparent">
+              <div class="modal-header border-0">
+                <h5 class="modal-title text-light">Articolo</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-light">
+                <div class="conainer">
+                  <div class="row d-flex flex-column flex-md-row align-items-top align-items-stretch">
+                    <div class="col">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </p>
+                      <div class="border-bottom text-uppercase mt-5 mb-3">
+                        Specifiche tecniche
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <dl>
+                            <dt><small>Largezza:</small></dt>
+                            <dd>000 cm</dd>
+                            <dt><small>Altezza:</small></dt>
+                            <dd>000 cm</dd>
+                          </dl>
+                        </div>
+                        <div class="col">
+                          <dl>
+                            <dt><small>Materiale:</small></dt>
+                            <dd>Lorem Ipsum</dd>
+                            <dt><small>Valore:</small></dt>
+                            <dd>30 <i class="bi bi-gem"></i></dd>
+                          </dl>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <img src="https://images.pexels.com/photos/7897470/pexels-photo-7897470.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" class="rounded img-fluid" alt="Layout 1">
+                    </div>
+
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      
+      
+      
+    </main><!-- End Main -->
+
+    <!-- ======= Footer ======= -->
+    <footer class="text-light bg-dark py-5">
+      <div class="container d-flex flex-row align-items-center g-3">
+        <div class="col text-center">
+          <img src="https://image.email.awtrade-alpitour.it/lib/fe41117175640479741671/m/2/ceed1f62-5293-4361-9c42-89b50a5336b3.png" height="32px" class="" alt="Logo Alpitour World">
+        </div>
+        <!-- <div class="col-sm-4 d-flex flex-row align-items-center">
+          <div class="col text-center flex-shrink-1 p-3">
+            <img src="https://image.email.awtrade-alpitour.it/lib/fe41117175640479741671/m/1/aa2a09ea-c024-4adf-83d3-ca1a763fc644.png" height="16px" class="" alt="Logo Turisanda 1924">
+          </div>
+          <div class="col text-center flex-shrink-1 p-3">
+            <img src="https://image.email.awtrade-alpitour.it/lib/fe41117175640479741671/m/1/18fc9e90-37dd-49a9-98ef-f24846c5b1d2.png" height="24px" class="" alt="Logo Presstour">
+          </div>
+          <div class="col text-center flex-shrink-1 p-3">
+            <img src="https://image.email.awtrade-alpitour.it/lib/fe41117175640479741671/m/1/0bf84050-a500-45cf-ab16-a00f9de0a026.png" height="32px" class="" alt="Logo Made">
+          </div>
+        </div> -->
+      </div>
+    </footer><!-- End Footer -->
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper -->
+    <script src='https://unpkg.com/swiper/swiper-bundle.min.js'></script>
+
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+
+    
+
+  </body>
+
+</html>

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+body {
+  font-family: 'Jost', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+.btn-outline-neutro:hover, .btn-outline-turisanda:hover {
+  color: #FFFFFF;
+}
+
+textarea {
+  height: 256px !important;
+}
+
+#header {
+  transition: all .4s ease-in-out;
+}
+
+#TU-logo {
+  transition: all .4s ease-in-out;
+}
+
+#diamond-head {
+  opacity: 0;
+  transition: all .4s ease-in-out;
+}
+
+.sticky-top {
+  top: 32px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 56px;
+  left: 0px;
+  width: 100%;
+}
+
+.neutro-slider .swiper-pagination-bullet {
+  background-color: #C8BCAF;
+}
+.swiper-slide {
+  height: auto !important;
+}
+
+.card-img {
+  object-fit: cover;
+  height:100%;
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+  .sticky-top {
+    top: 48px;
+  }
+ }
